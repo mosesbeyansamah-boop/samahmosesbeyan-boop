@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moses Samah - Computer Science student at the University of the Cordilleras. Portfolio of skills and projects in software development, IT and networking.">
+    <meta name="theme-color" content="#0b1020">
+    <title>Moses Samah | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#about">Skip to content</a>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <a href="#home" class="logo" aria-label="Moses Samah - home">M<span>S.</span></a>
+
+        <nav id="nav" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button id="themeToggle" type="button" aria-label="Switch to light theme">☾</button>
+            <button id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">☰</button>
+        </div>
+    </header>
+
+    <main>
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-content reveal">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+            <h1>Hello, I'm <span>Moses Samah</span></h1>
+
+            <h2>I'm a <span id="typing" aria-live="off"></span><span class="caret" aria-hidden="true">|</span></h2>
+
+            <p class="hero-description">
+                I am a Computer Science student at the University
+                of the Cordilleras. I am passionate about software
+                development, Information Technology, and networking.
+                I enjoy learning new technologies and creating
+                useful digital solutions.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">Explore My Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+
+            <div class="social-text">
+                <span>Computer Science</span>
+                <span>IT Networking</span>
+                <span>Software Development</span>
+            </div>
+        </div>
+
+        <!-- PROFILE PHOTO (upload your own picture here) -->
+        <div class="hero-image reveal">
+            <div class="image-border">
+                <div class="avatar" id="avatar">
+                    <img id="profileImg" alt="Photo of Moses Samah" hidden>
+                    <!-- Shown until you upload a photo -->
+                    <svg id="avatarDefault" viewBox="0 0 200 200" role="img" aria-label="Default avatar with the initials MS">
+                        <defs>
+                            <linearGradient id="avGrad" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#1e3a8a"/>
+                                <stop offset="1" stop-color="#7c3aed"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="200" height="200" fill="url(#avGrad)"/>
+                        <circle cx="100" cy="78" r="34" fill="rgba(255,255,255,.18)"/>
+                        <path d="M30 200c6-48 38-70 70-70s64 22 70 70z" fill="rgba(255,255,255,.18)"/>
+                        <text x="100" y="116" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="56" font-weight="700" fill="#fff">MS</text>
+                    </svg>
+                </div>
+
+                <button class="photo-btn" id="uploadBtn" type="button" aria-label="Upload your profile photo">
+                    <span aria-hidden="true">📷</span> <span id="uploadLabel">Upload photo</span>
+                </button>
+                <input type="file" id="photoInput" accept="image/png, image/jpeg, image/webp, image/gif" hidden>
+            </div>
+
+            <button class="photo-remove" id="removeBtn" type="button" hidden>Remove photo</button>
+            <p class="photo-msg" id="photoMsg" role="status" aria-live="polite"></p>
+
+            <div class="image-label">
+                <span class="status-dot"></span>
+                Future Software Developer
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+
+        <div class="section-heading reveal">
+            <p>GET TO KNOW ME</p>
+            <h2>About <span>Me</span></h2>
+        </div>
+
+        <div class="about-content reveal">
+
+            <div class="about-card">
+                <h3>Who Am I?</h3>
+
+                <p>
+                    My name is Moses Samah. I am a Computer Science
+                    student at the University of the Cordilleras.
+                    I have a strong interest in software development,
+                    Information Technology, and computer networking.
+                </p>
+
+                <p>
+                    I believe that learning is a continuous journey.
+                    Through education, practice, and personal projects,
+                    I am developing my programming, technical,
+                    communication, and problem-solving skills.
+                </p>
+
+                <p>
+                    My ambition is to become a skilled technology
+                    professional and use my knowledge to create
+                    meaningful solutions.
+                </p>
+
+                <a href="#contact" class="btn primary">Let's Connect</a>
+            </div>
+
+            <div class="about-details">
+                <div class="detail">
+                    <span aria-hidden="true">👨‍🎓</span>
+                    <div><small>Name</small><h4>Moses Samah</h4></div>
+                </div>
+                <div class="detail">
+                    <span aria-hidden="true">🎓</span>
+                    <div><small>University</small><h4>University of the Cordilleras</h4></div>
+                </div>
+                <div class="detail">
+                    <span aria-hidden="true">💻</span>
+                    <div><small>Course</small><h4>Computer Science</h4></div>
+                </div>
+                <div class="detail">
+                    <span aria-hidden="true">🚀</span>
+                    <div><small>Career Goal</small><h4>Software Developer</h4></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills-section" id="skills">
+
+        <div class="section-heading reveal">
+            <p>MY TECHNICAL ABILITIES</p>
+            <h2>My <span>Skills</span></h2>
+        </div>
+
+        <div class="skills-container reveal">
+
+            <div class="skill">
+                <div class="skill-info"><span>HTML</span><span>80%</span></div>
+                <div class="skill-bar" role="progressbar" aria-label="HTML" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span style="--level:80%"></span></div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info"><span>CSS</span><span>70%</span></div>
+                <div class="skill-bar" role="progressbar" aria-label="CSS" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span style="--level:70%"></span></div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info"><span>JavaScript</span><span>55%</span></div>
+                <div class="skill-bar" role="progressbar" aria-label="JavaScript" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"><span style="--level:55%"></span></div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info"><span>Java</span><span>60%</span></div>
+                <div class="skill-bar" role="progressbar" aria-label="Java" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span style="--level:60%"></span></div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info"><span>Computer Networking</span><span>50%</span></div>
+                <div class="skill-bar" role="progressbar" aria-label="Computer Networking" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span style="--level:50%"></span></div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info"><span>Problem Solving</span><span>65%</span></div>
+                <div class="skill-bar" role="progressbar" aria-label="Problem Solving" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span style="--level:65%"></span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+
+        <div class="section-heading reveal">
+            <p>WHAT I HAVE BEEN WORKING ON</p>
+            <h2>My <span>Projects</span></h2>
+        </div>
+
+        <div class="projects-grid">
+
+            <article class="project-card reveal">
+                <div class="project-icon" aria-hidden="true">🌐</div>
+                <span class="project-no">PROJECT 01</span>
+                <h3>Personal Portfolio</h3>
+                <p>A responsive personal website showcasing my background, education, technical skills, and achievements.</p>
+                <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-icon" aria-hidden="true">💻</div>
+                <span class="project-no">PROJECT 02</span>
+                <h3>Student Management System</h3>
+                <p>A Java programming project designed to organize student information and records using object-oriented programming.</p>
+                <div class="tags"><span>Java</span><span>OOP</span></div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-icon" aria-hidden="true">🧮</div>
+                <span class="project-no">PROJECT 03</span>
+                <h3>Calculator Application</h3>
+                <p>A simple calculator application developed to practise programming logic and interactive user interfaces.</p>
+                <div class="tags"><span>JavaScript</span><span>Logic</span></div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+
+        <div class="section-heading reveal">
+            <p>LET'S WORK TOGETHER</p>
+            <h2>Contact <span>Me</span></h2>
+            <p>Have a question or an opportunity? Send me a message.</p>
+        </div>
+
+        <div class="contact-container reveal">
+
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>I would love to hear from you. Feel free to contact me for questions, collaborations, or opportunities.</p>
+
+                <div class="contact-detail">
+                    <span aria-hidden="true">✉️</span>
+                    <div>
+                        <small>Email Address</small>
+                        <a href="mailto:mosesbeyansamah@gmail.com">mosesbeyansamah@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <span aria-hidden="true">🎓</span>
+                    <div><small>University</small><h4>University of the Cordilleras</h4></div>
+                </div>
+            </div>
+
+            <form id="contactForm" novalidate>
+                <div class="field">
+                    <label for="name">Your Full Name</label>
+                    <input type="text" id="name" autocomplete="name" placeholder="Your Full Name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Your Email Address</label>
+                    <input type="email" id="email" autocomplete="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="field">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="6" placeholder="Write your message..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn primary">Send Message ✈</button>
+                <p id="formMessage" role="status" aria-live="polite"></p>
+            </form>
+
+        </div>
+    </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#home" class="logo" aria-label="Back to top">M<span>S.</span></a>
+        <p>Learning Today. Building Tomorrow.</p>
+        <p>© <span id="year"></span> Moses Samah. All Rights Reserved.</p>
+    </footer>
+
+    <button class="to-top" id="toTop" type="button" aria-label="Back to top" hidden>↑</button>
+
+</body>
+</html>
