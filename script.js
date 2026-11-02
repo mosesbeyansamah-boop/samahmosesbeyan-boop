@@ -1,8 +1,8 @@
 /* =====================================================================
    MOSES SAMAH - PORTFOLIO JAVASCRIPT
-   Profile photo upload, dark/light theme, mobile menu, typing effect,
-   scroll animations, skill bars, active menu link, progress bar,
-   back-to-top button and contact-form validation.
+   Features: profile photo upload (saved in your browser), dark/light theme,
+   mobile menu, typing effect, scroll animations, skill bars, active menu link,
+   scroll progress bar, back-to-top button and contact-form validation.
    ===================================================================== */
 
 (function () {
@@ -22,8 +22,8 @@
 
     /* =================================================================
        1. PROFILE PHOTO UPLOAD
-       Click "Upload photo", choose a picture. It is shrunk to 600px,
-       shown at once and saved in this browser.
+       - Click "Upload photo", choose a picture from your computer or phone.
+       - It is shrunk to 600px, shown at once and saved in this browser.
        ================================================================= */
     const PHOTO_KEY = "moses-profile-photo";
     const MAX_FILE_MB = 8;
@@ -42,9 +42,9 @@
         msg.className = "photo-msg" + (type ? " " + type : "");
     }
 
-    // OPTIONAL: to show a fixed photo to every visitor, put your picture in this folder
-    // (for example profile.jpg) and write its name here: const DEFAULT_PHOTO = "profile.jpg";
-    const DEFAULT_PHOTO = "";
+    // Your own photo, shown to every visitor. Keep profile.jpg in the same folder as index.html.
+    // Visitors can still upload a different photo with the camera button.
+    const DEFAULT_PHOTO = "profile.jpg";
 
     function showPhoto(src) {
         const shown = src || DEFAULT_PHOTO;
@@ -212,9 +212,10 @@
 
     /* =================================================================
        7. CONTACT FORM
-       A web page cannot send email by itself. This form checks the fields,
-       then opens the visitor's email app with the message ready, addressed
-       to you. To receive messages directly, connect Formspree or Web3Forms.
+       A page alone cannot send email. This form checks the fields and then
+       opens your visitor's email app with the message already written,
+       addressed to you. To receive messages directly, connect a form
+       service such as Formspree or Web3Forms.
        ================================================================= */
     const MY_EMAIL = "mosesbeyansamah@gmail.com";
     const form = $("#contactForm");
