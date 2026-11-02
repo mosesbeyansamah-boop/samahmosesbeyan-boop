@@ -72,10 +72,28 @@
         <div class="hero-image reveal">
             <div class="image-border">
                 <div class="avatar" id="avatar">
-                   <img id="profileImg" src="profile.jpg" alt="Photo of Moses Samah" style="width:200px;height:200px;border-radius:50%;object-fit:cover;display:block;">
-</div>
-</div>
-</div>
+                    <img id="profileImg" alt="Photo of Moses Samah" hidden>
+                    <!-- Shown until you upload a photo -->
+                    <svg id="avatarDefault" viewBox="0 0 200 200" role="img" aria-label="Default avatar with the initials MS">
+                        <defs>
+                            <linearGradient id="avGrad" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#1e3a8a"/>
+                                <stop offset="1" stop-color="#7c3aed"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="200" height="200" fill="url(#avGrad)"/>
+                        <circle cx="100" cy="78" r="34" fill="rgba(255,255,255,.18)"/>
+                        <path d="M30 200c6-48 38-70 70-70s64 22 70 70z" fill="rgba(255,255,255,.18)"/>
+                        <text x="100" y="116" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="56" font-weight="700" fill="#fff">MS</text>
+                    </svg>
+                </div>
+
+                <button class="photo-btn" id="uploadBtn" type="button" aria-label="Upload your profile photo">
+                    <span aria-hidden="true">📷</span> <span id="uploadLabel">Upload photo</span>
+                </button>
+                <input type="file" id="photoInput" accept="image/png, image/jpeg, image/webp, image/gif" hidden>
+            </div>
+
             <button class="photo-remove" id="removeBtn" type="button" hidden>Remove photo</button>
             <p class="photo-msg" id="photoMsg" role="status" aria-live="polite"></p>
 
@@ -145,7 +163,7 @@
         </div>
     </section>
 
-    
+    <!-- SKILLS -->
     <section class="section skills-section" id="skills">
 
         <div class="section-heading reveal">
@@ -188,7 +206,7 @@
         </div>
     </section>
 
-    
+    <!-- PROJECTS -->
     <section class="section" id="projects">
 
         <div class="section-heading reveal">
@@ -225,7 +243,7 @@
         </div>
     </section>
 
-    
+    <!-- CONTACT -->
     <section class="section contact-section" id="contact">
 
         <div class="section-heading reveal">
@@ -280,7 +298,7 @@
     </section>
     </main>
 
-    
+    <!-- FOOTER -->
     <footer>
         <a href="#home" class="logo" aria-label="Back to top">M<span>S.</span></a>
         <p>Learning Today. Building Tomorrow.</p>
